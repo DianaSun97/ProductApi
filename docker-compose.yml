@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+     - "127.0.0.1:3306:3306"
+     - "127.0.0.1:33060:33060"
+
+#  phpmyadmin:
+#    image: phpmyadmin
+#    restart: always
+#    ports:
+#      - 8085:80
+#    environment:
+#      - PMA_HOST=db
+#      - MYSQL_ROOT_PASSWORD=admin
